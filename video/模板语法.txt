@@ -1,0 +1,6 @@
+插值表达式 {{msg + 'allen.tai'}} 不解析直接输出
+v-text="name"  vm.$data.name 不解析直接输出
+v-html="name"  vm.$data.name 会解析一次html语言
+v-on:click="handleClick" @click
+v-bind:title='title' :title='title'
+可以用js来 + 扩充
