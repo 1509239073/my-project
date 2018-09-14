@@ -1,0 +1,13 @@
+mvp jq 模式 面向dom
+v dom view
+p 控制器 p->ajax 或者 ajax presenter 操作dom
+m 模型层 ajax
+
+vue mvvm 面向数据
+model 存储数据
+view 显示数据
+viewModel  vue 自带内置
+
+vue 实例 M层更改数据
+v层 dom 
+vm层 自动的 es5 虚拟dom Object.defineProperty 监听数据变化，双向绑定数据

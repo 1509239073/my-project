@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue实例</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+/**
+ * 实例vue new Vue 根实例 vue中每一个组件也是一个实例
+ * vm.$data 实例属性 实例方法 vm.$destory 销毁了双向绑定就不存在了
+ */
+<body>
+	<div id="app" @click="handleClick">{{inputValue}}</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+				el:"#app",
+				// components:{
+				// 	'todo-item':TodeItem,
+				// },
+				data:{
+					inputValue:'hello',
+					list :[],
+				},
+				methods:{
+					handleClick:function(){
+						alert(this.inputValue);
+					}
+				}
+				
+		})
+		
+
+	</script>
+</body>
+</html>

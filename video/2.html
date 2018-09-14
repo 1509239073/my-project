@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>app.$data.inputValue</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+/**
+ * 实例vue的$data 获取值
+ */
+<body>
+	<div id="app">{{inputValue}}</div>
+	<script type="text/javascript">
+		var app = new Vue({
+				el:"#app",
+				// components:{
+				// 	'todo-item':TodeItem,
+				// },
+				data:{
+					inputValue:'hello',
+					list :[],
+				},
+				
+			})
+		setTimeout(function(){
+			app.$data.inputValue = 'bye world';
+		},2000)
+
+	</script>
+</body>
+</html>
