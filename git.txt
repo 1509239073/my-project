@@ -17,3 +17,6 @@ git status  //再看看是不是一样的
 git push origin  master  //提交到远程仓库 
 
 //gitlab的话还得登录gitlab账号去create merge request
+
+
+change
