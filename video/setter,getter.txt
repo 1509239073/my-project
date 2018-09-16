@@ -1,0 +1,14 @@
+computed:{
+    fullName:{
+        get:function(){ 
+            return this.firstName+' '+this.lastName;
+        },
+        set:function(){ 
+
+            return this.firstName+' '+this.lastName;
+        },
+    }
+
+},
+计算属性 setter,getter 
+set 之后 属性自动改变，so直接会进行get

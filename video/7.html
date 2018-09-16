@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>app.$data.inputValue</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+/**
+ * 计算属性
+ */
+<body>
+	<div id="app">
+		
+		{{firstName +" " +lastName}}
+		{{fullName}}
+	</div>
+	<script type="text/javascript">
+		var app = 
+			new Vue({
+				el:"#app",
+				
+				data:{
+					firstName:'allen',
+					lastName: 'tai',
+				},
+				computed:{
+					fullName:{
+						get:function(){ 
+							return this.firstName+' '+this.lastName;
+						},
+						set:function(){ 
+
+							return this.firstName+' '+this.lastName;
+						},
+					}
+
+				},
+				// methods:{
+				// 	fullName:function(){
+				// 		return this.firstName+' '+this.lastName;
+				// 	},
+				// },
+				// watch:{
+				// 	firstName:function(){
+				// 		return this.firstName+' '+this.lastName;
+
+				// 	},
+				// 	lastName:function(){
+				// 		return this.firstName+' '+this.lastName;
+
+				// 	},
+
+				// },
+				
+			})
+		
+
+	</script>
+</body>
+</html>
