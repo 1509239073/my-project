@@ -1,0 +1,8 @@
+v-if
+v-else-if
+v-else
+中间不能夹杂其他标签
+会复用一些dom ,所以需要 key来阻止复用
+
+v-show 和 v-if 区别
+不删除dom 删除dom 性能而言 v-show很好应对平凡切换的dom
