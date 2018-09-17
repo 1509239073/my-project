@@ -1,0 +1,46 @@
+<div id="app">
+	<div @click="handleClick"   :class="{activated:isActivated}">
+		
+		hello world
+	</div>
+</div>
+
+data:{
+	isActivated:false,
+	lastName: 'tai',
+},
+methods:{
+	handleClick:function(){
+		this.isActivated = !this.isActivated;
+	},
+},
+
+class 的对象绑定
+
+:class="[activated]" #可以多个class
+data:{
+	activated:'',
+	lastName: 'tai',
+},
+methods:{
+	handleClick:function(){
+		this.activated = this.activated == "activated"?'':'activated';
+	},
+},
+:class="[styleObj,{fontSize:'20px'}]"
+
+data:{
+	activated:'',
+	styleObj: {
+		color:'black',
+	},
+},
+methods:{
+	handleClick:function(){
+		this.activated = this.activated == "activated"?'':'activated';
+	},
+	handleObjClick:function(){
+		this.styleObj.color = this.styleObj.color == "black"?'red':'black';
+	},
+},
+fontSize 不能写font-size
