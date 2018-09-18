@@ -1,0 +1,24 @@
+app.$data.list.push({id:'5',text:'55'}) 
+push 没有问题
+app.list[4] = {id:'5',text:'55'}
+尝试修改数组 不能直接通过下标
+pop 删除最后一项
+push 增加一条
+shift 删除第一项
+unshift 数组的第一项加一点内容
+splice 截取
+sort 排序
+reverse 取反
+//位置 1 取一个 替换成 
+app.$data.list.splice(1,1,{id:'5',text:'55'}) 
+//直接赋值
+app.list = [];
+
+<template v-for="(item,index) of list" :key='item.id' >
+     {{item.text}} -- {{index}}
+</template>
+# value key  下标 更改对象
+v-for="(item,key,index) of list"
+app.userInfo.name = '111'
+//更新数据可以
+//动态添加 app.userInfo = {id:'1',text:'11'},
