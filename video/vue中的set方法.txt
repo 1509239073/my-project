@@ -1,0 +1,16 @@
+改变对象中的内容 
+set方法 
+app.userInfo ={}
+
+Vue.set(app.userInfo,'address','beijing')
+//实例添加
+app.$set(app.userInfo,'address','beijing')
+
+数组的set方法
+app.list =[];
+变异方法 push pop unshift shift sort reverse  splice
+
+Vue.set(app.list,1,5)
+
+app.$set(app.list,2,10)
+
