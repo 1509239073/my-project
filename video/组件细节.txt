@@ -1,0 +1,43 @@
+table tbody tr 
+定义的row 会在table之外 is="row"
+is 属性解决问题
+子组件的 data 都是独立的 data必须是函数返回的对象
+data:function(){
+    return {
+        content:'this is a content',
+    }
+},
+div 中 假如ref ref='hello'
+alert(this.$refs.hello.innerHTML);
+组件中ref 引用
+<counter  ref="one" @change="handleClick"></counter>
+<counter ref="two" @change="handleClick"></counter>
+<div>{{total}}</div>
+
+Vue.component('counter',{
+    data:function(){
+        return {
+            number:0,
+        }
+    },
+    template:'<div @click="handleClick" >{{number}}</div>',
+    methods:{
+            handleClick:function(){
+                this.number ++;
+                this.$emit('change');
+            },
+    }
+})
+var app = new Vue({
+            el:"#root",
+            
+            data:{
+                total:0,
+            },
+            methods:{
+                handleClick:function(){
+                    this.total = this.$refs.one.number + this.$refs.two.number
+                },
+            }
+            
+        })
