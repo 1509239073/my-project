@@ -1,0 +1,67 @@
+总线机制
+<!DOCTYPE html>
+<html>
+<head>
+    <title>非父子组件直接的传值(Bus/总线/发布订阅模式)</title>
+    <meta charset="UTF-8">
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        
+        <child  content="allen"></child>
+        <child content="tai"></child>
+
+
+    </div>
+    <script type="text/javascript">
+        Vue.prototype.bus = new Vue();
+        Vue.component('child',{
+            data:function(){
+                return {
+                    selfContent:this.content,
+                }
+            },
+            // props:['content'],
+            props:{
+                content:{
+                    type:String,
+                    
+
+                },
+            },
+            methods:{
+                handleClick:function(){
+                    this.bus.$emit('change',this.selfContent);
+                },
+            },
+            mounted:function(){
+                var this_ = this;
+                this.bus.$on('change',function(msg){
+                    this_.selfContent = msg;
+
+                })
+            },
+            template:'<div @click="handleClick">{{selfContent}}</div>',
+        })
+
+        
+        var app = new Vue({
+                el:"#root",
+                
+                data:{
+                    total:1,
+                },
+                methods:{
+                    handleClick:function(){
+                        alert(1)
+                    },
+                }
+                
+            })
+        
+
+    </script>
+</body>
+</html>

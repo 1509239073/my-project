@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件参数校验</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+/**
+ * native 原生事件绑定
+ */
+<body>
+	<div id="root">
+		
+		<child @click.native="handleClick"></child>
+
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			// data:function(){
+			// 	return {
+			// 		content:'this is a content',
+			// 	}
+			// },
+			// props:['content'],
+			// props:{
+			// 	content:{
+			//         type:String,
+			//         required:false,
+			//         default:'default value',
+
+			//     },
+			// },
+			methods:{
+				handleClick:function(){
+						alert('click');
+				},
+			},
+			template:'<div >child</div>',
+		})
+
+		
+		var app = new Vue({
+				el:"#root",
+				
+				data:{
+					total:1,
+				},
+				methods:{
+					handleClick:function(){
+						alert(1)
+					},
+				}
+				
+			})
+		
+
+	</script>
+</body>
+</html>
