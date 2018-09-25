@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件参数校验</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+
+<body>
+	<div id="root">
+		
+		<child ></child>
+
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			// data:function(){
+			// 	return {
+			// 		content:'this is a content',
+			// 	}
+			// },
+			// props:['content'],
+			props:{
+				content:{
+			        type:String,
+			        required:false,
+			        default:'default value',
+
+			    },
+			},
+			template:'<div>{{content}}</div>',
+		})
+
+		
+		var app = new Vue({
+				el:"#root",
+				
+				data:{
+					total:1,
+				},
+				methods:{
+					handleClick:function(step){
+						this.total += step;
+					},
+				}
+				
+			})
+		
+
+	</script>
+</body>
+</html>

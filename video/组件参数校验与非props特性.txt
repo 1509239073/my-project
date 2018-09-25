@@ -1,0 +1,18 @@
+props:{
+    content:[Number,String]
+},
+:content="111"
+定义类型 
+props:{
+    content:{
+        type:String,
+        required:false,
+        default:'default value',
+        validator:function(value){
+            return (value.length >5)
+        }
+
+    },
+},
+props 特性 子组件里声明了对父组件的接收 不会显示在dom中
+非props特性 子组件没有接收，没办法获取 会显示在dom中
