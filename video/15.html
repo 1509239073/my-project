@@ -10,32 +10,21 @@
  */
 <body>
 	<div id="root">
-		
-		<child @click.native="handleClick"></child>
+		<component :is='type'></component>
+		<!-- <child-one v-if="type ==='child-one'"></child-one>
+		<child-two v-if="type ==='child-two'"></child-two> -->
+		<button @click="handleClick">change</button>
 
 	</div>
 	<script type="text/javascript">
-		Vue.component('child',{
-			// data:function(){
-			// 	return {
-			// 		content:'this is a content',
-			// 	}
-			// },
-			// props:['content'],
-			// props:{
-			// 	content:{
-			//         type:String,
-			//         required:false,
-			//         default:'default value',
-
-			//     },
-			// },
-			methods:{
-				handleClick:function(){
-						alert('click');
-				},
-			},
-			template:'<div >child</div>',
+		Vue.component('child-one',{
+			
+			
+			template:'<div v-once >child-one</div>',
+		})
+		Vue.component('child-two',{
+			
+			template:'<div v-once >child-two</div>',
 		})
 
 		
@@ -43,11 +32,11 @@
 				el:"#root",
 				
 				data:{
-					total:1,
+					type:'child-one',
 				},
 				methods:{
 					handleClick:function(){
-						alert(1)
+						this.type = this.type=='child-one'?'child-two':'child-one';
 					},
 				}
 				
