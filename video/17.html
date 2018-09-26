@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 插槽slot</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+</head>
+/**
+ * slot 
+ */
+<body>
+	<div id="root">
+		
+		<child>
+			<p slot='header'>Dell</p>
+			<p slot='footer'>Tai</p>
+		</child>
+
+	</div>
+	<script type="text/javascript">
+		Vue.component('child',{
+			
+			methods:{
+				
+			},
+			template:`<div ><slot name='footer'>默认内容</slot><p>child</p><slot name='header'>默认内容</slot></div>`,
+		})
+
+		
+		var app = new Vue({
+				el:"#root",
+				
+				data:{
+					total:1,
+				},
+				methods:{
+					handleClick:function(){
+						alert(1)
+					},
+				}
+				
+			})
+		
+
+	</script>
+</body>
+</html>
