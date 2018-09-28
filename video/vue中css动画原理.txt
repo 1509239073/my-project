@@ -20,4 +20,9 @@ fade-leave-to delete
 
 Animate.css
 
+enter-active-class + 自定义class 
+leave-active-class + 自定义class
+
+http://www.dowebok.com/demo/2014/98/ 有意思的
+
 

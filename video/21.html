@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue中同时使用过度和动画</title>
+	<meta charset="UTF-8">
+	<script src="./vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./animate.css">
+</head>
+<style>
+	/*@keyframes bounce-in{
+		0%{
+			transform: scale(0);
+		}
+		50%{
+			transform: scale(1.5);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}*/
+	.fade-enter,.fade-leave-to{
+		opacity: 0;
+	}
+	.fade-enter-active{
+		transition: opacity 3s;
+	}
+	.fade-leave-active {
+		transition: opacity 3s;
+	}
+	/*.fade-enter-active{
+		transform-origin: left center;
+		animation: bounce-in 1s;
+	}
+	.fade-leave-active {
+		transform-origin: left center;
+		animation: bounce-in 1s reverse;
+	}*/
+	
+
+</style>
+:duration="{enter:500,leave:10000}"
+type='transition' //有问题 这个东西开始的效果会消失
+<body>
+	<div id="root">
+		<transition 
+			
+			type='transition'
+			name='fade' 
+			appear
+			enter-active-class="animated swing fade-enter-active"
+			leave-active-class="animated shake fade-leave-active"
+			appear-active-class="animated swing" 
+		>
+		<div v-if="show">hello world</div> 
+		
+		</transition>
+		<button @click="handleClick">切换</button>
+
+	</div>
+	<script type="text/javascript">
+		
+		var app = new Vue({
+				el:"#root",
+				
+				data:{
+					show:true,
+				},
+				methods:{
+					handleClick:function(){
+						this.show =!this.show;
+					},
+				}
+				
+			})
+		
+
+	</script>
+</body>
+</html>
