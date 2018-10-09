@@ -1,0 +1,16 @@
+1.node js 的运行环境 download 官网 node 安装 LTS版本
+2.打开cmd 或者git 
+3.检测 node -v npm-v 
+4.使用码云  allen.tai 没感叹号
+
+cd ~/.ssh
+cat id_rsa.pub
+git clone git@gitee.com:allen_tai/travel.git
+5.安装git git --version
+6.使用 vue-cli
+npm install --global vue-cli
+vue init webpack my-project my-project 为文件夹 不存在则创建
+
+cd travel
+npm run dev
+git push 上去就好了
