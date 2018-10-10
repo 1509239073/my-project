@@ -1,0 +1,15 @@
+static  静态资源
+node_modules 依赖包
+src 源代码
+    main.js 入口文件
+    App.vue 根组件
+    router/index.js 路由
+    components 组件
+    assets 图片
+config 配置
+    index.js 基础配置
+    dev.env.js 开发环境配置
+    prod.env.js 线上配置
+build
+    webpack 配置了同上的配置项
+
