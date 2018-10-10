@@ -1,5 +1,6 @@
-以.vue 结尾 为单文件组件
+﻿以.vue 结尾 为单文件组件
 //路由就是网址的不同
 <router-view/> 当前路由地址所显示的内容
 es6 键和值相同可省略
 @/components/HelloWorld @为src目录
+新建目录新增pages 目录
