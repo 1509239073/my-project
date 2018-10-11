@@ -1,0 +1,8 @@
+1.移动端网页
+2.index.html 中禁止放大，缩小页面
+minimun-scale=1.0,maximum-scale=1.0,er-scalable=no
+3.引入reset.css main.js 中添加
+4.移动端1像素边框 多倍屏中显示1px会放大效果
+5.某些机型300ms click延迟问题 npm install fastclick --save
+main.js 中添加
+6.iconfont 用户 git的账号
