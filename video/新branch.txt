@@ -1,0 +1,7 @@
+git branch
+git branch 分支名
+git checkout index-swiper
+git push -u origin index-swiper
+https://www.cnblogs.com/hope-markup/p/6679564.html
+
+.wrapper >>> .swiper-pagination-bullet-active 不生效效果！！！
