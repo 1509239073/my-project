@@ -18,5 +18,10 @@ git push origin  master  //提交到远程仓库
 
 //gitlab的话还得登录gitlab账号去create merge request
 
-
-change124
+change
+//处理分支
+git push -u origin index-swiper
+git checkout master
+git merge origin/index-swiper
+git push -u origin master
+>>>>>>> d5c478b02f30985ee8d7175d77858c4f128cbb1b
