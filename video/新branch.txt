@@ -5,3 +5,7 @@ git push -u origin index-swiper
 https://www.cnblogs.com/hope-markup/p/6679564.html
 
 .wrapper >>> .swiper-pagination-bullet-active 不生效效果！！！
+git push -u origin index-swiper
+git checkout master
+git merge origin/index-swiper
+git push -u origin master

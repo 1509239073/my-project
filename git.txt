@@ -20,3 +20,8 @@ git push origin  master  //提交到远程仓库
 
 
 change
+//处理分支
+git push -u origin index-swiper
+git checkout master
+git merge origin/index-swiper
+git push -u origin master
