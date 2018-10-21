@@ -24,4 +24,5 @@ git push -u origin index-swiper
 git checkout master
 git merge origin/index-swiper
 git push -u origin master
->>>>>>> d5c478b02f30985ee8d7175d77858c4f128cbb1b
+
+git checkout index-icons
