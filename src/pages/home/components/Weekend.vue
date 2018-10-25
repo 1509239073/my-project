@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -21,6 +21,9 @@
 <script>
 export default {
   name: 'HomeWeekend', 
+  props:{
+    list:Array
+  }, 
   data(){
   	return{
   		recommendList:[{
@@ -46,20 +49,17 @@ export default {
 <style lang="stylus" scpoed>
 	@import '~styles/mixins.styl'
 	.title
-		line-height: .4rem
+		line-height: .8rem
 		background:#eee
 		text-indent:.2rem
-		margin-top:.2rem
 	.item-img-wrapper	
 		overflow:hidden
 		height:0
-		padding-bottom:33.9%
+		padding-bottom:37.09%
 		.item-img
 			width:100%
-	.item-info
-		flex:1
-		padding:.1rem
-		min-width:0
+	.item-info	
+		padding:.1rem	
 		.item-title
 			line-height:.54rem
 			font-size:.32rem
@@ -68,11 +68,6 @@ export default {
 			line-height:.4rem
 			color:#ccc
 			ellipsis()
-		.item-button
-			background:#ff9300
-			padding:0 .2rem
-			border-radius: .06rem
-			margin-top:.16rem
-			line-height:.44rem
+		
 	
 </style>s
