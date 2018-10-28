@@ -83,7 +83,7 @@ export default {
         }
         pages[page].push(item)
       })
-      console.dir(pages)
+      // console.dir(pages)
       return pages
     }
   }

@@ -70,4 +70,4 @@ export default {
 			ellipsis()
 		
 	
-</style>s
+</style>
