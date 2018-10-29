@@ -9,7 +9,7 @@ export default {
   
 }
 </script>
-<style lang="stylus" scpoed>
+<style lang="stylus" scoped>
 	@import '~styles/varibles.styl'
 	.search
 		padding: 0 .1rem

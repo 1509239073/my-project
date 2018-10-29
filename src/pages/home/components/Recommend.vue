@@ -42,7 +42,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scpoed>
+<style lang="stylus" scoped>
 	@import '~styles/mixins.styl'
 	.title
 		line-height: .4rem

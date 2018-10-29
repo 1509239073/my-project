@@ -1,5 +1,5 @@
 <template>
-  <div class="header-con">
+  <div class="header">
   	城市选择
   	<router-link to="/">
   	<div class="iconfont header-back">&#xe624;</div>
@@ -12,9 +12,9 @@ export default {
   
 }
 </script>
-<style lang="stylus" scpoed>
+<style lang="stylus" scoped>
 	@import '~styles/varibles.styl'
-	.header-con
+	.header
 		position:relative
 		overflow:hidden
 		height:$headerHeight
