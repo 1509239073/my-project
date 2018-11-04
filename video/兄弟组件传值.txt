@@ -1,0 +1,20 @@
+e.target.innerText 获取innerText
+
+this.$emit('change',e.target.innerText) 向爸爸上报
+props 给儿子传值 
+watch 
+computed 
+对象转成array 
+const letters = []
+for (let i in this.cities){
+    letters.push(i)
+}
+
+touch 事件
+@click="handleLetterClick" :ref="item"
+@touchstart="handleTouchStart"
+@touchmove="handleTouchMove"
+@touchend="handleTouchEnd"
+
+:ref="item"
+调用 this.$refs['A'][0].offsetTop

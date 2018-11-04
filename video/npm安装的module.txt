@@ -1,0 +1,14 @@
+npm install better-scroll --save 
+//这个是 区域滚动的 
+npm install axios --save 
+// ajax  
+npm install --save fastClick 300ms 延迟
+
+npm install vue-awesome-swiper@2.6.7 --save 轮播效果
+
+npm install stylus --save
+npm install stylus-loader --save 样式不影响
+
+
+
+
