@@ -9,6 +9,8 @@ npm install vue-awesome-swiper@2.6.7 --save 轮播效果
 npm install stylus --save
 npm install stylus-loader --save 样式不影响
 
+npm install  vuex --save  动态使用数据 store 动态变更
+
 
 
 
