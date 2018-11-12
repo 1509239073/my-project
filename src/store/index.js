@@ -13,12 +13,13 @@ export default new Vuex.Store({
 	// 		ctx.commit('changeCity',city)
 	// 	}
 	// },
-	mutations,
-	getters:{
-		doubleCity(state) {
-			return state.city+' '+state.city
-		}
-	}
+	mutations
+	// ,
+	// getters:{
+	// 	doubleCity(state) {
+	// 		return state.city+' '+state.city
+	// 	}
+	// }
 })
  
 // module  模块化代码
