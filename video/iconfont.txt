@@ -5,3 +5,10 @@ webpack.base.conf.js 修改环境变量
 import 'styles/iconfont.css'
 css 中引入css需要加入@
 @import '~styles/varibles.styl'
+
+
+下载新的iconfont
+解压缩
+src/assets/styles/iconfont 替换掉老的iconfont开头的
+iconfont.css 第五行 base64  iconfont.css
+main.js 中新增引入
