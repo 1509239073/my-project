@@ -31,7 +31,7 @@
     methods:{
       handleScroll(){
         const top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        if(top > 60 && top < 140){
+        if(top > 60 ){
           let opacity = top / 140
           opacity = opacity > 1 ? 1 : opacity
           this.opacityStyle = { opacity }
@@ -67,6 +67,7 @@
         color: #fff
         font-size: .4rem
   .header-fixed
+    z-index:2
     position:fixed
     top:0
     left:0
