@@ -28,3 +28,4 @@ build assetsPublicPath: '/project',
 
 课程总结，后续学习指南
 vue官网 vuex 服务器端渲染
+处理完成后续
