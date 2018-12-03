@@ -1,0 +1,30 @@
+前后端接口联调
+原始数据在static/mock之中
+
+打开 config 中的 index.js
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {
+        '/api':{
+            target:'http://localhost:80', //后端服务器的地址
+            pathRewrite:{
+                '^/api':'static/mock' //这里是原始地址，后端服务器的话，不需要配置
+            }
+        }
+    },
+//后端服务器不在本地 内网ip 或者域名
+
+vue项目真机测试
+ package.json --host 0.0.0.0  可以通过ip访问
+ "webpack-dev-server  --host 0.0.0.0 
+ --inline --progress --config build/webpack.dev.conf.js",
+
+//vue项目打包上线
+npm run build
+dist/ index.html  static
+放在后端根目录下面 没毛病
+放在后端根目录下面的project 
+build assetsPublicPath: '/project',
+
+课程总结，后续学习指南
+vue官网 vuex 服务器端渲染
